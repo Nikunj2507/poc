@@ -1,0 +1,20 @@
+Process :
+
+1.Download  latest version of apache mq. curent code uses the version 5.15.8. 
+2.Go to apache-activemq-5.15.8 -> bin -> win64 ->activemq.bat  to start the active mq. 
+Once succesfully started the server can be accessed at the location. http://localhost:8161/
+
+3. The code sample attached is the examples of queue and topic.
+4. in Queue one producer sends the request and only one of the subsciber gets/process the request.
+5. In Topic one producer sends and all the subsciber gets the message once.
+6. The flow is like this :
+ActiveMqConnectionFactoey -> connection -> session -> pub/sub -> send/receive -> close session -> close connection.
+
+
+
+Next step:
+1. update this code to use spring active mq manager . 
+2. create a chat application doing this.
+
+A detailed video is available at location:https://www.youtube.com/watch?v=9WGSVnhlOHE
+ 
